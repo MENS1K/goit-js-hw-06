@@ -19,8 +19,8 @@ const listItems = images.map(({ url, alt }) => {
   return `<li  class="gallery-item"><a href="#"><img src="${url}" alt="${alt}" width="420" height="250"></a></li>`;
 });
 
-let markup = listItems.join("");
-galleryRef.innerHTML = markup;
+const markup = listItems.join("");
+galleryRef.insertAdjacentHTML("afterbegin", markup);
 
 const styleGallery = `
 display: flex;
